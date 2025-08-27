@@ -4,7 +4,11 @@ import App from "./App"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import FoodList from "./components/FoodList"
 import Home from "./components/Home"
-const router =createBrowserRouter({
+import { Provider } from "react-redux"
+import { store } from "./store"
+import Cart from "./components/Cart"
+import About from "./components/About"
+const router =createBrowserRouter([{
     path:"/",
     element:<App/>,
     children:[
@@ -13,12 +17,14 @@ const router =createBrowserRouter({
         {path:"/cart",element:<Cart/>},
         {path:"/about",element:<About/>},
 
-    ]
-})
+    ]}]
+)
 
 
 const root =ReactDOM.createRoot(document.getElementById("root"))
 root.render(
+    <Provider store={store}>
     <RouterProvider router={router}/>
+    </Provider>
 )
 

@@ -5,8 +5,8 @@ function Header() {
     return (
         <div>
             <header>
-                <img src="./public/images/logo1.jpg" alt="logo" width="60"/>
-                <Navbar />
+                <img src="/images/logo1.jpg" alt="logo" width="60"/>
+               
             </header>
         </div>
     )
