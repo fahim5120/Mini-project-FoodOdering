@@ -4,14 +4,14 @@ import App from "./App"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import FoodList from "./components/FoodList"
 import Home from "./components/Home"
-createBrowserRouter({
+const router =createBrowserRouter({
     path:"/",
     element:<App/>,
     children:[
         {path:"/",element:<Home/>},
         {path:"/menu",element:<FoodList/>},
         {path:"/cart",element:<Cart/>},
-        {path:"/about",element:<Home/>},
+        {path:"/about",element:<About/>},
 
     ]
 })

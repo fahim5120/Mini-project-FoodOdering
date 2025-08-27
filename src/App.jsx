@@ -1,8 +1,10 @@
 
 import React from "react";
-import FoodList from "./components/FoodList";
+
 import Header from "./components/header";
 import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
  
@@ -11,8 +13,11 @@ function App() {
     <>
       <div>
         <Header/>
+        <Navbar/>
+        <div>
         <Outlet/>
-        <FoodList/>
+        </div>
+        <Footer/>
       </div>
     </>
   )
