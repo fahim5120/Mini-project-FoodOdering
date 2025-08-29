@@ -1,21 +1,33 @@
 
-import React from "react";
+import React, { useState } from "react";
 
-import Header from "./components/header";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { useSelector } from "react-redux";
 
 function App() {
+const cart=useSelector((state)=>state.cart.items)
+const [searchTerm,setSearchTerm]=useState("")
+const [filter,setFilter]=useState("")
+
+const handleSearch=(value)=>{
+ setSearchTerm(value)
+}
+const handlefilter=(value)=>{
+setFilter(value)
+}
  
 
   return (
     <>
       <div>
-        <Header/>
-        <Navbar/>
+       
+        <Navbar onSearch={setSearchTerm}
+                onFilter={setFilter}
+                cartCount={cart.length}/>
         <div>
-        <Outlet/>
+        <Outlet context={{searchTerm,filter}}/>
         </div>
         <Footer/>
       </div>

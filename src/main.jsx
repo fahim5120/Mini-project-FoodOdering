@@ -7,6 +7,10 @@ import Home from "./components/Home"
 import { Provider } from "react-redux"
 import { store } from "./store"
 import Cart from "./components/Cart"
+
+import "./index.css";
+import Review from "./components/Order"
+import Order from "./components/Order"
 import About from "./components/About"
 const router =createBrowserRouter([{
     path:"/",
@@ -15,7 +19,9 @@ const router =createBrowserRouter([{
         {path:"/",element:<Home/>},
         {path:"/menu",element:<FoodList/>},
         {path:"/cart",element:<Cart/>},
-        {path:"/about",element:<About/>},
+        {path:"/order",element:<Order/>},
+        {path:"/review",element:<Review/>},
+         {path:"/about",element:<About/>},
 
     ]}]
 )
