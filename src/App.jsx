@@ -1,10 +1,10 @@
 
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import { useSelector } from "react-redux"
 
 function App() {
 const cart=useSelector((state)=>state.cart.items)

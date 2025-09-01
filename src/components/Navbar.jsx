@@ -23,7 +23,7 @@ function Navbar({ onSearch, onFilter,cartCount }) {
 
                     {/* Menu Links */}
                     <div className="hidden md:flex space-x-6">
-                        <Link to="/" className="text-white hover:text-yellow-300 font-medium transition">
+                        <Link to="/home" className="text-white hover:text-yellow-300 font-medium transition">
                             Home
                         </Link>
                         <Link to="/menu" className="text-white hover:text-yellow-300 font-medium transition">
@@ -33,15 +33,13 @@ function Navbar({ onSearch, onFilter,cartCount }) {
                             <FiShoppingCart className="mr-2 text-xl" />
                             Cart{cartCount>0 &&(<span className="absolute -top-2 -right-3 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">{cartCount}</span>)}
                         </Link>
-                        <Link to="/review" className="text-white hover:text-yellow-300 font-medium transition">
-                            Review
-                        </Link>
+                        
                         <Link to="/order" className="text-white hover:text-yellow-300 font-medium transition">
                             Order
                         </Link>
-                         <Link to="/about" className="text-white hover:text-yellow-300 font-medium transition">
-                           About
-                        </Link>
+                        
+                       
+                       
                     </div>
 
                     {/* search */}
@@ -81,6 +79,10 @@ function Navbar({ onSearch, onFilter,cartCount }) {
                 {cartCount >0 && <span>{cartCount}</span>}
                 </Link>
                     </div>
+                     <Link to="/signup" className="text-white hover:text-yellow-300 font-medium transition">
+                     Sign Up
+                            
+                        </Link>
                 </div>
             </div>
         </nav>
